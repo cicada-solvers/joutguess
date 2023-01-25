@@ -1,0 +1,50 @@
+*{
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+#subload{
+	font-size:0.5em;
+}
+.overlay{
+	display:block;
+	position:absolute;
+	left:0;
+	right:0;
+	top:25px;
+	bottom:0;
+	background-color: rgba(127,127,127,0.90);
+	transition: background-color 0.25s;
+	color: black;
+	font-size: 3em;
+	text-align: center;
+}
+.overlay-drag{
+	background-color: rgba(127,127,64,0.85);
+}
+#header{
+	height:25px;
+	padding:0;
+	margin:0;
+	font-size: 20px;
+	background-color: gray;
+	color: black;
+	text-align: center;
+}
+button{
+	padding:3px;
+	font-size: 0.5em;
+}
+#result-text-container{
+	display: inline-block;
+}
+#result-text{
+	text-align: left;
+	font-size: 0.5em;
+}
+#upload-overlay,#processing-overlay,#result-overlay{
+	display:none;
+}
+#term_paste{
+	display:none;
+}

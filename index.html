@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>JOutguess - online outguess check</title>
+        <link href="../js-linux/vm_files/style.css" type="text/css" rel="stylesheet"/>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <script>
+            window.jslinuxdisabledownloadprogress = true;
+            window.jslinuxskiphandlers = true;
+            window.jslinuxoverrideparams = "?url=" + window.location.protocol + "//cyber.meme.tips/js-linux/vm_files/buildroot-x86.cfg";
+            console.log(window.jslinuxoverrideparams);
+        </script>
+    </head>
+    <body>
+        <div id="header">JOutguess - online outguess check <div style="display: inline;float: right;"><button id="console-button" onclick="joutguess.toggle_console()">access terminal</button></div></div>
+        <div id="term_wrap" style="display:none">
+            <div id="term_container">
+            </div>
+            <div>
+                <textarea id="term_paste" cols="10" rows="1" autocorrect="off">Paste Here</textarea>
+            </div>
+        </div>
+        <div id="loading-overlay" class="overlay">
+            Loading...<br>
+            <span id="subload">(this may take a while the first time or without asm.js support)</span><br>
+            <img src="throbber.gif">
+        </div>
+        <div id="upload-overlay" class="overlay" ondrop="joutguess.drop_event(event)" ondragover="joutguess.drag_event(event)">
+            Select or Drag File<br>
+            <input type="file" id="filesX" accept=".jpg,.jpeg,image/jpeg" onchange="joutguess.file_event(this.files)">
+        </div>
+        <div id="processing-overlay" class="overlay">
+            processing...<br>
+            <img src="throbber.gif">
+        </div>
+        <div id="result-overlay" class="overlay">
+            Finished<br>
+            <div id="result-text-container"><pre id="result-text">results here</pre></div><br>
+            <button onclick="joutguess.get_outguess_output()">Download Output</button>
+            <button onclick="joutguess.switch_overlay('upload')">Check Another</button>
+        </div>
+        <script type="text/javascript" src="../js-linux/vm_files/term.js"></script>
+        <script type="text/javascript" src="../js-linux/vm_files/jslinux.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="ie11_polyfills.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
+

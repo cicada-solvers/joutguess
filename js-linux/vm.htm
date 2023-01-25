@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+    <title>JSLinux VM</title>
+    <link href="vm_files/style.css" type="text/css" rel="stylesheet"/>
+<script>
+            //window.jslinuxdisabledownloadprogress = true;
+            //window.jslinuxskiphandlers = true;
+            function locationpath(){ return document.URL.substr(0,document.URL.lastIndexOf('/')); }
+            window.jslinuxoverrideparams = "?url=" + locationpath() + "/vm_files/buildroot-x86.cfg";
+</script>
+</head>
+<body>
+<div id="term_wrap" style="display:none">
+    <div id="term_container">
+    </div>
+    <div>
+      <textarea id="term_paste" cols="10" rows="1" autocorrect="off">Paste Here</textarea>
+      <label>
+       <img title="Upload files" src="vm_files/upload-icon.png"><input type="file" id="files" multiple onchange="on_update_files(this.files)">
+      </label>
+      <progress id="net_progress">
+      </progress>
+    </div>
+</div>
+<script type="text/javascript" src="vm_files/term.js"></script>
+<script type="text/javascript" src="vm_files/jslinux.js"></script>
+<div id="copyright">&copy; 2017-2018 <a href="https://bellard.org">Fabrice Bellard</a></div>
+</body>
+</html>
+
